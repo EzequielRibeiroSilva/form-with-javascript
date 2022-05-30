@@ -1,0 +1,194 @@
+:root {
+    --colorOne: #397ef6;
+    --colorTwo: #adb6cf;
+    --colorThree: #344055;
+    --colorFour: #f26156;
+    --colorFive: #f6f6f6;
+}
+   
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--colorFive);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    max-width: 100%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+/* Editando os dois containers */
+
+.containerImg {
+    width: 600px;
+    max-width: 100%;
+    background: #F3F4F6;
+}
+
+.containerForm {
+    width: 600px;
+    max-width: 100%;
+    background: white;
+}
+
+.containerControlOne {
+    width: 400px;
+    max-width: 100%;
+}
+
+.containerControlTwo {
+    width: 400px;
+    max-width: 100%;
+    padding: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* Editando os elementos do containerImg*/
+
+.logo {
+    font-size: 22px;
+    padding: 40px 50px 0px 50px;
+    color: var(--colorOne);
+}
+
+.containerControlOne p {
+    font-size: 13px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 15px;
+    color: var(--colorTwo);  
+}
+
+.img {
+    width: 370px;
+    padding: 40px;
+}
+
+/* Editando os elementos do containerForm */
+
+.containerControlTwo .sing h1 {
+    font-size: 30px;
+    color: var(--colorThree);
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.containerControlTwo .sing p {
+    font-size: 13px;
+    color: var(--colorTwo);  
+}
+
+.blue {
+    color: var(--colorOne);
+}
+
+.sing {
+    padding-bottom: 40px;
+}
+
+/* Editando o form */
+
+.form-control {
+    margin-bottom: 13px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: var(--colorThree);
+}
+
+.form-control input {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid var(--colorTwo);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-size: 13px;
+    width: 100%;
+    display: block;
+}
+
+.form-control i {
+    position: absolute;
+    top: 37px;
+    right: 10px;
+    color: var(--colorTwo);
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    font-size: 13px;
+}
+
+.form-control .submit {
+    padding: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: var(--colorOne);
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.form-control .google {
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: var(--colorTwo);
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid var(--colorTwo);
+}
+
+.form-control .google i.fa-google {
+    position: absolute;
+    top: 17px;
+    right: 205px;
+    color: var(--colorOne);
+}
+
+.last p {
+    font-size: 10px;
+    color: var(--colorTwo);
+    padding: 20px 40px 10px 0;
+}
+
+/* success e error */
+.form-control small.error  {
+    visibility: visible;
+    color: var(--colorFour);
+    
+}
+
+.form-control small.success  {
+    visibility: visible;
+    color: var(--colorOne);
+    
+}

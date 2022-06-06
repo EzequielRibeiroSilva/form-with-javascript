@@ -7,6 +7,8 @@ let btnGoogle = document.querySelector('.google');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     createAccount()
+    
+    
 });
 
 function createAccount() {
@@ -16,41 +18,45 @@ function createAccount() {
     if (emailValue === '') {
         setErrorFor(email, 'User email is required');
     } else if (!checkEmail(emailValue)) {
-        setErrorFor(email, 'Please enter a valid email');
+        setErrorFor(email, 'Use a valid email');
     } else {
-
+        setSuccessFor(email, 'valid email');
     }
+
     if (passwordValue === '') {
-        setErrorFor(email, 'User password is required');
-    } else if (passwordValue.length < 7) {
-        setErrorFor(email, 'Password needs 7 characters');
+        setErrorFor(password, 'Password is mandatory');
+    } else if (passwordValue.length < 6) {
+        setErrorFor(password, 'Password needs 6 characters');
     } else {
-        setSuccessFor(password);
+        setSuccessFor(password, 'valid password');
     }
 
 }
 
 function setErrorFor(input, message) {
-    let classControl = input.parentElement;
-    let small = classControl.querySelector('small');
+    let formControl = input.parentElement;
+    let small = formControl.querySelector('small');
+    
 
     //Adicionar a menssagem de erro
-    small.innerHTML = message;
+    small.innerText = message;
 
     //Adicionando a class erro
-    small.className = 'classControl error';
+    small.className = 'formControl error';
 }
 
 function setSuccessFor(input) {
-    let classControl = input.parentElement;
+    let formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+    small.innerHTML = "";
+    alert('Conta criada com sucesso');
 
     //Adicionando a class success
-    classControl.className = 'classControl success';
+    classControl.className = 'form-control classControl success';
 }
 
 function checkEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        email
+      email
     );
-}
-
+  }

@@ -180,7 +180,13 @@ body {
     padding: 20px 40px 10px 0;
 }
 
-/* success e error */
+.google a {
+    color: var(--colorTwo);
+    text-decoration: none;
+}
+
+/*success e error*/
+
 .form-control small.error  {
     visibility: visible;
     color: var(--colorFour);
@@ -192,3 +198,4 @@ body {
     color: var(--colorOne);
     
 }
+ 
